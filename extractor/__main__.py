@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import sys
+from json import dumps
 import youtube_dl
 
 ydl_opts = {
@@ -19,4 +20,4 @@ with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         if not url:
             break
 
-        print(extract(url, download=False))
+        print(dumps(extract(url, download=False)))
