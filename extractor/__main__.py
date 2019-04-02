@@ -20,4 +20,4 @@ with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         if not url:
             break
 
-        print(dumps(extract(url, download=False)))
+        print(dumps(extract(url, download=False)), flush=True)
